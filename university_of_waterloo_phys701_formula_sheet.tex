@@ -1,0 +1,640 @@
+%-*- mode: latex ;mode: visual-line -*-
+
+% A formula sheet for:
+%   University of Waterloo/Guelph Phys 701/7010, Quantum Mechanics I
+
+% For history, pull requests etc..., see github repo:
+%   https://github.com/jddmartin/university_of_waterloo_phys701_formula_sheet
+
+% Abbreviations used in references:
+% SN: Sakurai and Napolitano, Quantum Mechanics, 2nd ed.
+% SAQM: Schwabl, Advanced quantum mechanics, 4th ed.
+
+\documentclass[11pt]{article}
+\usepackage[left=1.5cm,top=2.0cm,right=2.25cm,bottom=3.0cm]{geometry}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage{multicol}
+\usepackage{braket}
+\usepackage{amsmath}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+
+% for the following see: https://tex.stackexchange.com/a/11144 
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\CurD}{\mathcal{D}}
+\newcommand{\CurJ}{\mathcal{J}}
+
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+
+\newcommand{\lambdabar}{{\mkern0.75mu\mathchar '26\mkern -9.75mu\lambda}}
+
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{0pt}
+\setlength{\columnseprule}{0.4pt}
+\setlength{\columnsep}{1in}
+
+\begin{document}
+
+\begin{center} 
+{\large University of Waterloo/Guelph, Phys 701/7010, Quantum Mechanics I, Fall 2018, Formula sheet}
+\end{center}
+
+\begin{multicols}{2}
+
+{\bf Basic Formulae}
+
+\begin{equation} % Reference: SN1.4.53
+\braket{(\Delta A)^2} \braket{(\Delta B)^2} 
+  \ge \frac{1}{4} |\!\braket{[A,B]}|^2
+\end{equation}
+
+\begin{equation}
+\Delta A \equiv A - \braket{A}
+\end{equation}
+
+\begin{equation}
+\CurJ (\Delta \vect{x}') = \exp \left (-\frac{i}{\hbar} \Delta \vect{x}' \cdot \vect{p} \right)
+\end{equation}
+
+\begin{equation}
+[\,x,p\,] = i\hbar
+\end{equation}
+
+\begin{equation}
+\vect{p} = -i \hbar \vect{\nabla}
+\end{equation}
+
+\begin{equation}
+\braket{x'|p'} = \frac{1}{\sqrt{2\pi\hbar}} \exp (i\frac{p'x'}{\hbar})
+\end{equation}
+
+\begin{equation}
+i\hbar \frac{\partial \psi}{\partial t} = (-\frac{\hbar^2}{2m} \nabla^2 + V) \psi
+\end{equation}
+
+\begin{equation}
+\psi = \frac{u(r)}{r} Y_{\ell,m}(\theta,\phi)
+\end{equation}
+
+\begin{equation}
+\left(
+  -\frac{\hbar^2}{2m} \frac{d^2}{d r^2}
+  + \frac{\hbar^2}{2m} \frac{\ell (\ell+1)}{r^2}
+  + V(r)
+\right) u(r) = E u(r)
+\end{equation}
+
+\begin{equation}
+\vect{\nabla} \cdot \vect{j} = - \frac{\partial \rho}{\partial t}
+\end{equation}
+
+\begin{equation}
+\vect{j} = - \frac{i \hbar}{2m} \: [\psi^* \vect{\nabla} \psi - \psi \vect{\nabla} \psi^*]
+\end{equation}
+
+\begin{equation}
+e^{A+B}=e^A \: e^B \: e^{-\frac{1}{2}[A,B]} 
+\end{equation}
+{\footnotesize for \( [[A,B],A]=[[A,B],B]=0 \) .}
+
+\columnbreak
+
+{\bf Harmonic Oscillator}
+
+\begin{equation}
+H = \frac{p^2}{2m} + \frac{1}{2} m \omega^2 \: x^2
+\end{equation}
+
+\begin{equation}
+a = \sqrt{\frac{m\omega}{2\hbar}} \left( x+\frac{ip}{m\omega} \right)
+\end{equation}
+
+\begin{equation}
+a^{\dagger} = \sqrt{\frac{m\omega}{2\hbar}} \left( x-\frac{ip}{m\omega} \right)
+\end{equation}
+
+\begin{equation}
+[\:a, a^{\dagger}] = 1
+\end{equation}
+
+\begin{equation}
+a \ket{n} = \sqrt{n} \ket{n-1}
+\end{equation}
+
+\begin{equation}
+a^{\dagger} \ket{n} = \sqrt{n+1} \ket{n+1}
+\end{equation}
+
+\begin{equation}
+H = \hbar\omega(a^{\dagger}a+\frac{1}{2})
+\end{equation}
+
+{\bf Angular Momentum}
+
+\begin{equation}
+\CurD_{\vect{\hat{n}}} (\Delta \theta )  
+  = \exp \left(-\frac{i}{\hbar} \: \Delta \theta \:
+               \vect{J} \cdot \vect{\hat{n}} \right )
+\end{equation}
+
+\begin{equation}
+[J_a,J_b] = i \hbar \epsilon_{abc} J_c
+\end{equation}
+
+\begin{equation}
+\vect{J}^2 \ket{j,m} = \hbar^2 j (j+1) \ket{j,m}
+\end{equation}
+
+\begin{equation}
+J_z \ket{j,m} = \hbar m \ket{j,m}
+\end{equation}
+
+\begin{equation}
+J_{\pm} = J_x \pm i J_y
+\end{equation}
+
+\begin{equation}
+J_{\pm} \ket{j,m} = \hbar \sqrt{j(j+1)-m(m\pm1)} \ket{j,m\pm1}
+\end{equation}
+
+\begin{equation}
+\ket{j_1j_2;jm} =
+ \sum_{m_1,m_2} \braket{j_1j_2;m_1m_2|j_1j_2;jm} \ket{j_1j_2;m_1m_2}
+\end{equation}
+
+\begin{equation}
+\braket{j_1j_2;m_1m_2|j_1j_2;jm}
+ = \braket{j_1j_2;jm|j_1j_2;m_1m_2}
+\end{equation}
+
+\begin{equation}
+\braket{j_1j_2;j_1,j-j_1|j_1j_2;jj} > 0
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\sum_{m_1,m_2} \braket{j_1j_2;m_1m_2|j_1j_2,jm} \braket{j_1j_2;m_1m_2|j_1j_2,j'm'} \\ = \delta_{j,j'}\delta_{m,m'}
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\sum_{j,m} \braket{j_1j_2;m_1m_2|j_1j_2,jm} \braket{j_1j_2;m_1'm_2'|j_1j_2,jm} \\ = \delta_{m_1,m_1'}\delta_{m_2,m_2'}
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\bra{\alpha' j' m'}T^{(k)}_q\ket{\alpha j m} =
+  \frac{\bra{\alpha ' j'}|T^{(k)}|\ket{\alpha j}}{\sqrt{2j+1}} \times \\
+  \braket{jk;mq|jk;j'm'}
+\end{split}
+\end{equation}
+
+\begin{equation}
+\vect{L} = \vect{r} \times \vect{p}
+\end{equation}
+
+{\bf Spin-1/2}
+
+\begin{equation}
+\vect{J} = \frac{\hbar}{2} \vect{\sigma}
+\end{equation}
+where
+\begin{equation}
+\sigma_x = \left(
+           \begin{array}{cc}
+              0 & 1 \\
+              1 & 0 
+           \end{array}
+           \right)
+\end{equation}
+
+\begin{equation}
+\sigma_y = \left(
+           \begin{array}{cc}
+              0 & -i \\
+              i & 0 
+           \end{array}
+           \right)
+\end{equation}
+
+\begin{equation}
+\sigma_z = \left(
+           \begin{array}{cc}
+              1 & 0 \\
+              0 & -1 
+           \end{array}
+           \right)
+\end{equation}
+
+\begin{equation}
+[ \sigma_i, \sigma_j ] = 2i \epsilon_{i,j,k} \sigma_k
+\end{equation}
+
+\begin{equation}
+[\,\sigma_i,\sigma_j\,]_+ = 2 \delta_{i,j}
+\end{equation}
+\begin{equation}
+e^{- \frac{i}{2} \, \vect{\sigma} \cdot \vect{\hat{n}} \, \phi 
+     }
+  = \cos(\phi /2) - i \vect{\sigma} \cdot \vect{\hat{n}} \sin(\phi /2)
+\end{equation}
+
+{\bf EM Fields (rationalized MKSA units)}
+
+\begin{equation}
+\vect{B} = \vect{\nabla} \times \vect{A}
+\end{equation}
+
+\begin{equation}
+\vect{E} = -\vect{\nabla} \phi - \frac{\partial \vect{A}}{\partial t}
+\end{equation}
+
+\begin{equation}
+H = \frac{(\vect{p} - q \vect{A})^2}{2m} + q \phi
+\end{equation}
+
+\begin{equation}
+\Lagr = \frac{1}{2} m \vect{v} \cdot \vect{v} + q \vect{v} \cdot \vect{A} - q \phi
+\end{equation}
+
+\begin{equation}
+\vect{A} = - \frac{1}{2} \: (\vect{r} \times \vect{B_{\rm constant}})
+\end{equation}
+
+\begin{equation}
+A^{i} \equiv (V/c,\vect{A})
+\end{equation}
+
+\begin{equation}
+\vect{\mu}_{\rm magnetic} = \frac{q}{2m} \vect{\ell}
+\end{equation}
+
+\begin{equation}
+\vect{\mu}_{\rm magnetic} = g \frac{q}{2m} \vect{j}
+\end{equation}
+
+\begin{equation}
+U_{\rm magnetic} = - \vect{\mu}_{\rm magnetic} \cdot \vect{B}
+\end{equation}
+
+{\bf Scattering}
+
+\begin{equation}
+R = F \sigma
+\end{equation}
+
+% Ansatz wave-function
+\begin{equation}
+\psi = A \left [
+         e^{ikz} + f(\theta,\phi) \frac{e^{ikr}}{r}
+         \right ]
+\end{equation}
+
+\begin{equation}
+\frac{d \sigma}{d \Omega} = |f(\theta,\phi)|^2
+\end{equation}
+
+\begin{equation}
+f(\theta) = \frac{1}{k} \sum_{\ell=0}^{\infty}
+            (2\ell+1) e^{i\delta_{\ell}} \sin(\delta_{\ell})
+            P_{\ell}(\cos \theta)
+\end{equation}
+
+\begin{equation}
+\sigma = \frac{4\pi}{k^2} \sum_{\ell = 0}^{\infty} (2\ell+1)    
+         \sin ^2(\delta_{\ell})
+\end{equation}
+
+\begin{equation}
+u(r) \propto \sin \left( kr - \frac{1}{2}\ell\pi+\delta_{\ell}
+                  \right)
+\end{equation}
+
+% Born approximation:
+\begin{equation}
+f(\theta,\phi) \approx - \frac{m}{2\pi\hbar^2}
+                 \int e^{i(\vect{k'}-\vect{k}) \cdot \vect{r_0}} V(\vect{r}_0)
+                      \: d^3 \vect{r}_0
+\end{equation}
+where $\vect{k'} = k \vect{\hat{z}}$.
+\begin{equation}
+f(\theta) \approx - \frac{2m}{\hbar^2 \kappa}
+          \int_{0}^{\infty} r V(r) \sin(\kappa r) \: dr,
+\end{equation}
+where $\kappa = 2 k \sin(\theta/2)$.
+
+\begin{equation}
+u(r) \propto (r - a_s)
+\end{equation}
+
+\begin{equation}
+\sigma = 4\pi a_s^2
+\end{equation}
+
+\begin{equation}
+E_{\rm bind} \approx \frac{\hbar^2}{2ma_s^2}
+\end{equation}
+
+\begin{equation}
+  \frac{d\sigma}{d\Omega} = \frac{Z^2 q^4}{(4\pi\epsilon_0)^2}
+  \frac{1}{16E^2 \sin^4 \theta/2} ,
+\end{equation}
+
+\begin{equation}
+  \sigma_{\ell} = \frac{4\pi}{k^2}
+                  \frac{(2\ell+1)(\Gamma/2)^2}{[(E-E_r)^2+\Gamma^2/4]}
+\end{equation}
+
+\begin{equation}
+\frac{d(\cot \delta_{\ell})}{dE} \bigg\rvert_{E=E_r} = - \frac{2}{\Gamma} 
+\end{equation}
+
+
+{\bf Interaction picture}
+
+\begin{equation} % Reference: SN Eq. 5.5.5
+\ket{\alpha,t_0;t}_{I} = 
+  e^{iH_0t/\hbar} \ket{\alpha,t_0;t}_{S} 
+\end{equation}
+
+\begin{equation} % Reference: SN Eq. 5.5.7
+V_I = e^{iH_0t/\hbar}Ve^{-iH_0t/\hbar}
+\end{equation}
+
+\begin{equation} % Reference: SN Eq. 5.5.11
+i\hbar \frac{\partial}{\partial t} \ket{\alpha,t_0;t} = V_I \ket{\alpha,t_0;t}
+\end{equation}
+
+\begin{equation} % Reference: SN Eq. 5.5.13
+\ket{\alpha,t_0;t}_I = \sum_n c_n(t) \ket{n}
+\end{equation}
+
+\begin{equation} % Reference: SN Eq. 5.5.15
+i\hbar \frac{d}{dt} c_n(t)  = \sum_m V_{nm} e^{i\omega_{nm}t}c_m(t)
+\end{equation}
+
+{\bf Time-dependent perturbation theory}
+
+\begin{equation}
+c_n(t) = c_n^{(0)} + c_n^{(1)} + c_n^{(2)} + \dots
+\end{equation}
+
+\begin{align}
+c_n^{(0)}(t) & = \delta_{n,i} \\
+c_n^{(1)}(t) & = \frac{-i}{\hbar} 
+  \int_{t_0}^t e^{i\omega_{n,i}t'} V_{n,i}(t') \: dt' \\
+c_n^{(2)}(t) & = \left( \frac{-i}{\hbar} \right)^2
+\sum_m \int_{t_0}^{t} dt' \int_{t_0}^{t'} dt''  \nonumber \\
+&
+e^{i\omega_{n,m}t'} V_{n,m}(t') e^{i\omega_{m,i}t''} V_{m,i}(t'')
+\end{align}
+
+
+\begin{equation}
+|c_n^{(1)}|^2 =
+  \frac{4|V_{ni}|^2}{|E_n-E_i|^2} \sin^2 
+    \left [
+      \frac{(E_n-E_i)t}{2\hbar}
+    \right ]
+\end{equation}
+{\footnotesize for $V$ switched on at $t=0$, but otherwise time-independent.}
+
+\begin{equation}
+w_{i\rightarrow [n]} =
+\frac{2\pi}{\hbar} \overline{|V_{n,i}|^2} \rho(E_n)_{E_n \approx E_i}
+\end{equation}
+
+{\bf Relativistic one-particle wave equations}
+
+\begin{equation}
+E = \sqrt{(pc)^2+(mc^2)^2}
+\end{equation} 
+
+\begin{equation}
+\lambdabar = \frac{\hbar c}{mc^2}
+\end{equation}
+
+\begin{equation}
+A^i \equiv (A^0, \vect{A})
+\end{equation}
+
+\begin{equation}
+A_i \equiv (A^0, -\vect{A})
+\end{equation}
+
+\begin{equation}
+A^i B_i = A_i B^i \:\: {\rm invariant}
+\end{equation}
+
+\begin{equation}
+\partial_i \equiv (\frac{1}{c}\partial_t, \vect{\nabla})
+\end{equation}
+
+\begin{equation}
+\partial^2 \equiv \partial_{i} \partial^{i}
+\end{equation}
+
+\begin{equation}
+\left( \frac{\hbar^2}{c^2} \partial^2 + m^2 \right) \psi = 0 
+\end{equation}
+
+\begin{equation}
+i \hbar \frac{\partial \psi}{\partial t} = 
+ \left( c \: \vect{\alpha} \cdot \vect{p} + \beta mc^2 \right) \psi
+\end{equation}
+
+\begin{equation}
+\vect{\alpha} = \left(
+                   \begin{array}{cc}
+                     0 & \vect{\sigma} \\
+                     \vect{\sigma} & 0 
+                   \end{array}
+                \right)
+\:\:\:\:
+\beta = \left(
+           \begin{array}{cc}
+              I & 0 \\
+              0 & -I 
+           \end{array}
+        \right)
+\end{equation}
+
+\begin{equation}
+\vect{j} = c \: \psi^{\dagger} \vect{\alpha} \psi
+\end{equation}
+
+\begin{equation}
+i \hbar \frac{\partial \psi}{\partial t} =
+\left (-\frac{\hbar^2}{2m} \nabla^2 
+  - g \frac{q}{2m} \frac{\hbar}{2} \vect{\sigma}\cdot \vect{B} \right) 
+  \psi
+\end{equation}
+
+% Refence Eq. 8.2.37 of SAQM
+\begin{align}
+  E_{n,j} & = mc^2 \:\:\: \times \nonumber \\ 
+    & \left[1 +
+    \left(
+    \frac{Z\alpha}{
+      n - (j+\frac{1}{2}) + \sqrt{(j+\frac{1}{2})^2 - (Z\alpha)^2}
+      }
+    \right)^2
+    \right]^{-\frac{1}{2}}
+\end{align}
+
+\begin{align}
+  E & = - \frac{mc^2}{2n^2} (Z\alpha)^2 \:\:\: \times \nonumber \\
+  & \left[ 1 + \frac{(Z\alpha)^2}{n}
+  \left( \frac{1}{j+\frac{1}{2}} - \frac{3}{4n}
+  \right)
+  +O((Z\alpha)^4) \right]
+\end{align}
+
+
+% Reference: Eq. 8.1.18' of SAQM
+\begin{align}
+  E_{n,\ell} & = mc^2 \:\:\: \times \nonumber \\ 
+    & \left[1 +
+    \left(
+    \frac{Z\alpha}{
+      n - (\ell+\frac{1}{2}) + \sqrt{(\ell+\frac{1}{2})^2 - (Z\alpha)^2}
+      }
+    \right)^2
+    \right]^{-\frac{1}{2}}
+\end{align}
+
+\begin{align}
+  E & = - \frac{mc^2}{2n^2} (Z\alpha)^2 \:\:\: \times \nonumber \\
+  & \left[ 1 + \frac{(Z\alpha)^2}{n}
+  \left( \frac{1}{\ell+\frac{1}{2}} - \frac{3}{4n}
+  \right)
+  +O((Z\alpha)^4) \right]
+\end{align}
+
+{\bf Some integrals}
+
+\begin{equation}
+\int_{-\infty}^{\infty} dx \: e^{ix(k''-k')} = 2 \pi \delta (k''-k')
+\end{equation}
+
+\begin{equation}
+\int_{-\infty}^{\infty} dx \: \exp (\alpha i x^2) = \sqrt{\frac{\pi i}{\alpha}}
+\label{eq:simp_int}
+\end{equation}
+
+\begin{equation}
+\int_{-\infty}^{\infty} dx \; x^2 \exp (\alpha i x^2) 
+  = \frac{\sqrt{\pi}}{2} \left( \frac{i}{\alpha} \right)^{3/2}
+\label{eq:2nd_simp_int}
+\end{equation}
+{\small ($^{*}$oscillates around this value)}.
+
+\begin{equation}
+\int_{0}^{\pi} \sin^{2}{\left (x \right )}\, dx  =  \frac{\pi}{2}
+\end{equation}
+
+\begin{equation}
+\int_{0}^{2 \pi} \sin^{2}{\left (x \right )}\, dx  =  \pi
+\end{equation}
+
+\begin{equation}
+\int_{0}^{\frac{\pi}{2}} \sin{\left (x \right )} \sin{\left (2 x \right )}\, dx  =  \frac{2}{3}
+\end{equation}
+
+
+
+{\bf Legendre Polynomials}
+
+\begin{equation}
+P_0(x) = 1
+\end{equation}
+\begin{equation}
+P_1(x) = x
+\end{equation}
+\begin{equation}
+P_2(x) = \frac{1}{2} (3x^2-1)
+\end{equation}
+
+{\bf Spherical coordinates}
+
+\begin{eqnarray}
+z/r & = & \cos \theta \\
+x/r & = & \sin \theta \cos \phi \\
+y/r & = & \sin \theta \sin \phi
+\end{eqnarray}
+
+\end{multicols}
+
+\vspace{1in}
+
+{\large \centerline{Physical constants and conversion factors}}
+% from: http://johanw.home.xs4all.nl/contents.html
+\def\npar{\par\medskip}
+%\def\vec#1{\mbox{\boldmath$#1$\unboldmath}} % Uncomment this when you don't like the arrows
+\def\vvec#1{\vec{#1}\,}
+\def\rr{\vec{r}}
+\def\vv{\vec{v}}
+\def\aaa{\vec{a}}
+\def\e#1{\vec{e}_{\rm #1}}
+\def\ee#1{\vec{e}_{#1}}
+\def\Q#1#2{\frac{\partial #1}{\partial #2}}
+\def\QQ#1#2{\frac{\partial^2 #1}{\partial #2^2}}
+\def\Qc#1#2#3{\left(\frac{\partial #1}{\partial #2}\right)_{#3}}
+\def\LL{{\cal L}}
+\def\RR{I\hspace{-1mm}R}
+\def\NN{I\hspace{-1mm}N}
+\def\TT{\mbox{\sfd T}}
+\def\DD{\mbox{\sfd D}}
+\def\half{\mbox{$\frac{1}{2}$}}
+\def\kwart{\mbox{$\frac{1}{4}$}}
+\def\av#1{\left\langle #1 \right\rangle}
+\def\oiint{\int\hspace{-2ex}\int\hspace{-3ex}\bigcirc~}
+\def\iint{\int\hspace{-1.5ex}\int}
+\def\iiint{\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int}
+\def\dd{d\hspace{-1ex}\rule[1.25ex]{2mm}{0.4pt}}
+\def\lrarrow{~\lower.2ex\hbox{$\rightarrow$}\kern-2.4ex\raise.7ex\hbox{$\leftarrow$}~}
+\def\rlarrow{~\lower.2ex\hbox{$\leftarrow$}\kern-2.3ex\raise.7ex\hbox{$\rightarrow$}~}
+\def\ne{n_{\rm e}}
+\def\ni{n_{\rm i}}
+\def\no{n_{\rm 0}}
+\def\me{m_{\rm e}}
+\def\mi{m_{\rm i}}
+\def\Te{T_{\rm e}}
+\def\Ti{T_{\rm i}}
+
+\def\labelenumii{\Roman{enumii}.}
+\def\theenumii{\Roman{enumii}}
+\def\p@enumii{\theenumi}
+\begin{center}
+\begin{tabular}{||l|lll||}
+\hline
+{\bf Name}&{\bf Symbol}&{\bf Value}&{\bf Unit}\\
+\hline
+\hline
+Elementary charge            &$e$&$1.60217733\cdot10^{-19}$&C\rule{0pt}{13pt}\\
+Fine-structure constant      &$\alpha=e^2/2hc\varepsilon_0$&$\approx1/137$&\\
+Speed of light in vacuum     &$c$&$2.99792458\cdot10^8$&m/s (def)\\
+Permittivity of the vacuum   &$\varepsilon_0$&$8.854187\cdot10^{-12}$&F/m\\
+Permeability of the vacuum   &$\mu_0$&$4\pi\cdot10^{-7}$&H/m\\
+$(4\pi\varepsilon_0)^{-1}$   &&$8.9876\cdot10^9$&Nm$^2$C$^{-2}$\\
+Planck's constant            &$h$&$6.6260755\cdot10^{-34}$&Js\rule{0pt}{13pt}\\
+                             &$\hbar=h/2\pi$&$1.0545727\cdot10^{-34}$&Js\\
+Electron mass                &$m_{\rm e}$&$9.1093897\cdot10^{-31}$&kg\rule{0pt}{13pt}\\
+Proton mass                  &$m_{\rm p}$&$1.6726231\cdot10^{-27}$&kg\\
+Elementary mass unit         &$m_{\rm u}=\frac{1}{12}m(^{12}_{~6}$C)&$1.6605656\cdot10^{-27}$&kg\\
+barn & b & 10$^{-28}$ & m$^2$ \\ 
+\hline
+\end{tabular}
+\end{center}
+
+% Include Particle Data Group Clebsch-Gordan table:
+% (downloaded from: https://goo.gl/aBUKnk )
+  \includepdf[pages={1},pagecommand={
+    \begin{tikzpicture}[remember picture, overlay]
+      \node[anchor=west] at (0, 1.3)
+           {\bf From the {\it Review of Particle Physics}
+                         {\footnotesize \url{http://pdg.lbl.gov}}};
+    \end{tikzpicture}}]{artifacts/rpp2018-rev-clebsch-gordan-coefs.pdf}
+\end{document}
