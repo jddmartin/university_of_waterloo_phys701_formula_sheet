@@ -2,6 +2,9 @@
 #+AUTHOR: Jim Martin /et al./
 #+DATE: 
 
+* Rendered version:
+- a pdf rendering is at: https://v2.overleaf.com/read/rvjgqzcjkxyx
+
 * Notes on contributing:
 Please let me know of any corrections.  I am open to suggestions for additions, subject to the following guidelines:
 - I will not consider suggestions made less than one week before final exam.  There is too much potential for ``last-minute'' mistakes to arise.
