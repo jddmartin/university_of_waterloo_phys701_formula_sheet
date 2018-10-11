@@ -1,4 +1,4 @@
-#+TITLE: University of Waterloo, Phys 701 formula sheet
+#+TITLE: A formula sheet for University of Waterloo/Guelph Phys 701/7010, Quantum Mechanics I 
 #+AUTHOR: Jim Martin /et al./
 #+DATE: 
 
