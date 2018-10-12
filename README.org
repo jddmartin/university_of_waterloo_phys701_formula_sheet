@@ -1,3 +1,4 @@
+# -*- mode: org; mode: visual-line; mode: adaptive-wrap-prefix ; mode: flyspell 
 #+TITLE: A formula sheet for University of Waterloo/Guelph Phys 701/7010, Quantum Mechanics I 
 #+AUTHOR: Jim Martin /et al./
 #+DATE: 
@@ -10,6 +11,7 @@ Please let me know of any corrections.  I am open to suggestions for additions, 
 - I will not consider suggestions made less than one week before final exam.  There is too much potential for ``last-minute'' mistakes to arise.
 - my preference is to receive suggestions as github pull requests, but e-mail is acceptable.
 - if you send e-mail, please provide latex code.  [[http://www.overleaf.com]] is a good way to check your code online.
+- a useful utility for generating latex code from images is available at https://mathpix.com/ (unfortunately closed source).
 - please provide a reference for your suggestion (I'll be working on inserting more references into latex source code).
 - I use lualatex to compile (see Makefile).  This will be irrelevant for most contributions, unless you wish to make use of some of lualatex's features.
 
