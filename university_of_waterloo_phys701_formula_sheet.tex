@@ -19,7 +19,7 @@
 \usepackage{amsmath}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
 
-% for the following see: https://tex.stackexchange.com/a/11144 
+% for the following see: https://tex.stackexchange.com/a/11144
 \newcommand{\Lagr}{\mathcal{L}}
 \newcommand{\CurD}{\mathcal{D}}
 \newcommand{\CurJ}{\mathcal{J}}
@@ -35,7 +35,7 @@
 
 \begin{document}
 
-\begin{center} 
+\begin{center}
 {\large University of Waterloo/Guelph, Phys 701/7010, Quantum Mechanics I, Fall 2018, Formula sheet}
 \end{center}
 
@@ -44,7 +44,7 @@
 {\bf Basic Formulae}
 
 \begin{equation} % Reference: SN1.4.53
-\braket{(\Delta A)^2} \braket{(\Delta B)^2} 
+\braket{(\Delta A)^2} \braket{(\Delta B)^2}
   \ge \frac{1}{4} |\!\braket{[A,B]}|^2
 \end{equation}
 
@@ -93,7 +93,7 @@ i\hbar \frac{\partial \psi}{\partial t} = (-\frac{\hbar^2}{2m} \nabla^2 + V) \ps
 \end{equation}
 
 \begin{equation}
-e^{A+B}=e^A \: e^B \: e^{-\frac{1}{2}[A,B]} 
+e^{A+B}=e^A \: e^B \: e^{-\frac{1}{2}[A,B]}
 \end{equation}
 {\footnotesize for \( [[A,B],A]=[[A,B],B]=0 \) .}
 
@@ -132,7 +132,7 @@ H = \hbar\omega(a^{\dagger}a+\frac{1}{2})
 {\bf Angular Momentum}
 
 \begin{equation}
-\CurD_{\vect{\hat{n}}} (\Delta \theta )  
+\CurD_{\vect{\hat{n}}} (\Delta \theta )
   = \exp \left(-\frac{i}{\hbar} \: \Delta \theta \:
                \vect{J} \cdot \vect{\hat{n}} \right )
 \end{equation}
@@ -205,7 +205,7 @@ where
 \sigma_x = \left(
            \begin{array}{cc}
               0 & 1 \\
-              1 & 0 
+              1 & 0
            \end{array}
            \right)
 \end{equation}
@@ -214,7 +214,7 @@ where
 \sigma_y = \left(
            \begin{array}{cc}
               0 & -i \\
-              i & 0 
+              i & 0
            \end{array}
            \right)
 \end{equation}
@@ -223,7 +223,7 @@ where
 \sigma_z = \left(
            \begin{array}{cc}
               1 & 0 \\
-              0 & -1 
+              0 & -1
            \end{array}
            \right)
 \end{equation}
@@ -236,7 +236,7 @@ where
 [\,\sigma_i,\sigma_j\,]_+ = 2 \delta_{i,j}
 \end{equation}
 \begin{equation}
-e^{- \frac{i}{2} \, \vect{\sigma} \cdot \vect{\hat{n}} \, \phi 
+e^{- \frac{i}{2} \, \vect{\sigma} \cdot \vect{\hat{n}} \, \phi
      }
   = \cos(\phi /2) - i \vect{\sigma} \cdot \vect{\hat{n}} \sin(\phi /2)
 \end{equation}
@@ -303,7 +303,7 @@ f(\theta) = \frac{1}{k} \sum_{\ell=0}^{\infty}
 \end{equation}
 
 \begin{equation}
-\sigma = \frac{4\pi}{k^2} \sum_{\ell = 0}^{\infty} (2\ell+1)    
+\sigma = \frac{4\pi}{k^2} \sum_{\ell = 0}^{\infty} (2\ell+1)
          \sin ^2(\delta_{\ell})
 \end{equation}
 
@@ -348,15 +348,15 @@ E_{\rm bind} \approx \frac{\hbar^2}{2ma_s^2}
 \end{equation}
 
 \begin{equation}
-\frac{d(\cot \delta_{\ell})}{dE} \bigg\rvert_{E=E_r} = - \frac{2}{\Gamma} 
+\frac{d(\cot \delta_{\ell})}{dE} \bigg\rvert_{E=E_r} = - \frac{2}{\Gamma}
 \end{equation}
 
 
 {\bf Interaction picture}
 
 \begin{equation} % Reference: SN Eq. 5.5.5
-\ket{\alpha,t_0;t}_{I} = 
-  e^{iH_0t/\hbar} \ket{\alpha,t_0;t}_{S} 
+\ket{\alpha,t_0;t}_{I} =
+  e^{iH_0t/\hbar} \ket{\alpha,t_0;t}_{S}
 \end{equation}
 
 \begin{equation} % Reference: SN Eq. 5.5.7
@@ -383,7 +383,7 @@ c_n(t) = c_n^{(0)} + c_n^{(1)} + c_n^{(2)} + \dots
 
 \begin{align}
 c_n^{(0)}(t) & = \delta_{n,i} \\
-c_n^{(1)}(t) & = \frac{-i}{\hbar} 
+c_n^{(1)}(t) & = \frac{-i}{\hbar}
   \int_{t_0}^t e^{i\omega_{n,i}t'} V_{n,i}(t') \: dt' \\
 c_n^{(2)}(t) & = \left( \frac{-i}{\hbar} \right)^2
 \sum_m \int_{t_0}^{t} dt' \int_{t_0}^{t'} dt''  \nonumber \\
@@ -394,7 +394,7 @@ e^{i\omega_{n,m}t'} V_{n,m}(t') e^{i\omega_{m,i}t''} V_{m,i}(t'')
 
 \begin{equation}
 |c_n^{(1)}|^2 =
-  \frac{4|V_{ni}|^2}{|E_n-E_i|^2} \sin^2 
+  \frac{4|V_{ni}|^2}{|E_n-E_i|^2} \sin^2
     \left [
       \frac{(E_n-E_i)t}{2\hbar}
     \right ]
@@ -410,7 +410,7 @@ w_{i\rightarrow [n]} =
 
 \begin{equation}
 E = \sqrt{(pc)^2+(mc^2)^2}
-\end{equation} 
+\end{equation}
 
 \begin{equation}
 \lambdabar = \frac{\hbar c}{mc^2}
@@ -437,11 +437,11 @@ A^i B_i = A_i B^i \:\: {\rm invariant}
 \end{equation}
 
 \begin{equation}
-\left( \frac{\hbar^2}{c^2} \partial^2 + m^2 \right) \psi = 0 
+\left( \frac{\hbar^2}{c^2} \partial^2 + m^2 \right) \psi = 0
 \end{equation}
 
 \begin{equation}
-i \hbar \frac{\partial \psi}{\partial t} = 
+i \hbar \frac{\partial \psi}{\partial t} =
  \left( c \: \vect{\alpha} \cdot \vect{p} + \beta mc^2 \right) \psi
 \end{equation}
 
@@ -449,14 +449,14 @@ i \hbar \frac{\partial \psi}{\partial t} =
 \vect{\alpha} = \left(
                    \begin{array}{cc}
                      0 & \vect{\sigma} \\
-                     \vect{\sigma} & 0 
+                     \vect{\sigma} & 0
                    \end{array}
                 \right)
 \:\:\:\:
 \beta = \left(
            \begin{array}{cc}
               I & 0 \\
-              0 & -I 
+              0 & -I
            \end{array}
         \right)
 \end{equation}
@@ -467,14 +467,14 @@ i \hbar \frac{\partial \psi}{\partial t} =
 
 \begin{equation}
 i \hbar \frac{\partial \psi}{\partial t} =
-\left (-\frac{\hbar^2}{2m} \nabla^2 
-  - g \frac{q}{2m} \frac{\hbar}{2} \vect{\sigma}\cdot \vect{B} \right) 
+\left (-\frac{\hbar^2}{2m} \nabla^2
+  - g \frac{q}{2m} \frac{\hbar}{2} \vect{\sigma}\cdot \vect{B} \right)
   \psi
 \end{equation}
 
 % Refence Eq. 8.2.37 of SAQM
 \begin{align}
-  E_{n,j} & = mc^2 \:\:\: \times \nonumber \\ 
+  E_{n,j} & = mc^2 \:\:\: \times \nonumber \\
     & \left[1 +
     \left(
     \frac{Z\alpha}{
@@ -495,7 +495,7 @@ i \hbar \frac{\partial \psi}{\partial t} =
 
 % Reference: Eq. 8.1.18' of SAQM
 \begin{align}
-  E_{n,\ell} & = mc^2 \:\:\: \times \nonumber \\ 
+  E_{n,\ell} & = mc^2 \:\:\: \times \nonumber \\
     & \left[1 +
     \left(
     \frac{Z\alpha}{
@@ -525,7 +525,7 @@ i \hbar \frac{\partial \psi}{\partial t} =
 \end{equation}
 
 \begin{equation}
-\int_{-\infty}^{\infty} dx \; x^2 \exp (\alpha i x^2) 
+\int_{-\infty}^{\infty} dx \; x^2 \exp (\alpha i x^2)
   = \frac{\sqrt{\pi}}{2} \left( \frac{i}{\alpha} \right)^{3/2}
 \label{eq:2nd_simp_int}
 \end{equation}
@@ -624,7 +624,7 @@ Planck's constant            &$h$&$6.6260755\cdot10^{-34}$&Js\rule{0pt}{13pt}\\
 Electron mass                &$m_{\rm e}$&$9.1093897\cdot10^{-31}$&kg\rule{0pt}{13pt}\\
 Proton mass                  &$m_{\rm p}$&$1.6726231\cdot10^{-27}$&kg\\
 Elementary mass unit         &$m_{\rm u}=\frac{1}{12}m(^{12}_{~6}$C)&$1.6605656\cdot10^{-27}$&kg\\
-barn & b & 10$^{-28}$ & m$^2$ \\ 
+barn & b & 10$^{-28}$ & m$^2$ \\
 \hline
 \end{tabular}
 \end{center}
