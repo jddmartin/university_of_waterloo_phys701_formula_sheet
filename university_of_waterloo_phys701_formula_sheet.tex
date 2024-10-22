@@ -36,7 +36,7 @@
 \begin{document}
 
 \begin{center}
-{\large University of Waterloo/Guelph, Phys 701/7010, Quantum Mechanics I, Fall 2018, Formula sheet}
+{\large University of Waterloo/Guelph, Phys 701/7010, Quantum Mechanics I, Formula sheet}
 \end{center}
 
 \begin{multicols}{2}
@@ -517,6 +517,34 @@ i \hbar \frac{\partial \psi}{\partial t} =
   \right)
   +O((Z\alpha)^4) \right]
 \end{align}
+
+{\bf WKB}
+
+\begin{equation}
+\psi_{\pm} (x) \propto \frac{1}{\sqrt{p(x)}}
+  \exp(\pm \frac{i}{\hbar} \int^{x} dx' \: p(x'))
+\end{equation}
+where
+\begin{equation}
+p(x) = \sqrt{2 m (E-V(x))}
+\end{equation}
+
+\begin{equation}
+\frac{1}{\hbar} \int_0^{x_+(E)} dx \: p(x) =
+\left(n + \frac{3}{4} \right) \pi
+\end{equation}
+and
+\begin{equation}
+\frac{1}{\hbar} \int_{x_-(E)}^{x_+(E)} dx \: p(x) =
+\left(n + \frac{1}{2} \right) \pi
+\end{equation}
+with $n=0,1,2,\ldots$.
+
+{\bf Variational}
+
+\begin{equation}
+[ E ] = \frac{\braket{\psi|H|\psi}}{\braket{\psi|\psi}}
+\end{equation}
 
 {\bf Some integrals}
 
