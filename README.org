@@ -8,7 +8,7 @@
 
 * Notes on contributing:
 Please let me know of any corrections.  I am open to suggestions for additions, subject to the following guidelines:
-- I will not consider suggestions made less than one week before final exam.  There is too much potential for ``last-minute'' mistakes to arise.
+- I will not consider additions made less than one week before tests and exams.  There is too much potential for ``last-minute'' mistakes to arise.
 - my preference is to receive suggestions as github pull requests, but e-mail is acceptable.
 - if you send e-mail, please provide latex code.  [[http://www.overleaf.com]] is a good way to check your code online.
 - a useful utility for generating latex code from images of formulae is available at https://mathpix.com/ (unfortunately closed source). 
