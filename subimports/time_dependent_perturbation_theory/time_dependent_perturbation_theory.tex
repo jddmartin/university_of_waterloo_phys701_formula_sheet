@@ -1,0 +1,30 @@
+{\bf Time-dependent perturbation theory}
+
+\begin{equation}
+c_n(t) = c_n^{(0)} + c_n^{(1)} + c_n^{(2)} + \dots
+\end{equation}
+
+\begin{align}
+c_n^{(0)}(t) & = \delta_{n,i} \\
+c_n^{(1)}(t) & = \frac{-i}{\hbar}
+  \int_{t_0}^t e^{i\omega_{n,i}t'} V_{n,i}(t') \: dt' \\
+c_n^{(2)}(t) & = \left( \frac{-i}{\hbar} \right)^2
+\sum_m \int_{t_0}^{t} dt' \int_{t_0}^{t'} dt''  \nonumber \\
+&
+e^{i\omega_{n,m}t'} V_{n,m}(t') e^{i\omega_{m,i}t''} V_{m,i}(t'')
+\end{align}
+
+
+\begin{equation}
+|c_n^{(1)}|^2 =
+  \frac{4|V_{ni}|^2}{|E_n-E_i|^2} \sin^2
+    \left [
+      \frac{(E_n-E_i)t}{2\hbar}
+    \right ]
+\end{equation}
+{\footnotesize for $V$ switched on at $t=0$, but otherwise time-independent.}
+
+\begin{equation}
+w_{i\rightarrow [n]} =
+\frac{2\pi}{\hbar} \overline{|V_{n,i}|^2} \rho(E_n)_{E_n \approx E_i}
+\end{equation}

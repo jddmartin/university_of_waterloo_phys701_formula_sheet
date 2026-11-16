@@ -1,0 +1,76 @@
+{\bf Scattering}
+
+\begin{equation}
+R = F \sigma
+\end{equation}
+
+% Ansatz wave-function
+\begin{equation}
+\psi = A \left [
+         e^{ikz} + f(\theta,\phi) \frac{e^{ikr}}{r}
+         \right ]
+\end{equation}
+
+\begin{equation}
+\frac{d \sigma}{d \Omega} = |f(\theta,\phi)|^2
+\end{equation}
+
+\begin{equation}
+f(\theta) = \frac{1}{k} \sum_{\ell=0}^{\infty}
+            (2\ell+1) e^{i\delta_{\ell}} \sin(\delta_{\ell})
+            P_{\ell}(\cos \theta)
+\end{equation}
+
+\begin{equation}
+\sigma = \frac{4\pi}{k^2} \sum_{\ell = 0}^{\infty} (2\ell+1)
+         \sin ^2(\delta_{\ell})
+\end{equation}
+
+\begin{equation}
+u(r) \propto \sin \left( kr - \frac{1}{2}\ell\pi+\delta_{\ell}
+                  \right)
+\end{equation}
+
+% Born approximation:
+\begin{equation}
+f(\theta,\phi) \approx - \frac{m}{2\pi\hbar^2}
+                 \int e^{i(\vect{k'}-\vect{k}) \cdot \vect{r_0}} V(\vect{r}_0)
+                      \: d^3 \vect{r}_0
+\end{equation}
+where $\vect{k'} = k \vect{\hat{z}}$.
+\begin{equation}
+f(\theta) \approx - \frac{2m}{\hbar^2 q}
+          \int_{0}^{\infty} r V(r) \sin(q r) \: dr,
+\end{equation}
+where $q = 2 k \sin(\theta/2)$.
+
+\begin{equation}
+u(r) \propto (r - a_s)
+\end{equation}
+
+\begin{equation}
+\sigma = 4\pi a_s^2
+\end{equation}
+
+\begin{equation}
+E_{\rm bind} \approx \frac{\hbar^2}{2ma_s^2}
+\end{equation}
+
+\begin{equation}
+  \frac{d\sigma}{d\Omega} = \frac{Z^2 q^4}{(4\pi\epsilon_0)^2}
+  \frac{1}{16E^2 \sin^4 \theta/2} ,
+\end{equation}
+
+\begin{equation}
+\frac{d\sigma}{d \Omega}=\left(\frac{\hbar c}{E}\right)^2 \quad \frac{Z_1^2 Z_2^2 \alpha^2}{16 \sin ^4 \theta / 2}
+\end{equation}
+
+\begin{equation}
+  \sigma_{\ell} = \frac{4\pi}{k^2}
+                  \frac{(2\ell+1)(\Gamma/2)^2}{[(E-E_r)^2+\Gamma^2/4]}
+\end{equation}
+
+\begin{equation}
+\frac{d(\cot \delta_{\ell})}{dE} \bigg\rvert_{E=E_r} = - \frac{2}{\Gamma}
+\end{equation}
+
