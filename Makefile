@@ -9,4 +9,5 @@ $(source)_generated.pdf : $(source).tex
 		rm -f *_generated* ; \
           fi ; \
 	done
+	pdftk A="university_of_waterloo_phys701_formula_sheet_generated.pdf" cat A1-5 output "phys701_short_formula_sheet_generated.pdf" 
 	rm -f *_generated.aux *_generated.toc *_generated.log *_generated.out
